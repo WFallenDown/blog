@@ -1,6 +1,7 @@
 # blog
 
 > A Vue.js project
+has use ElementUI
 
 ## Build Setup
 
