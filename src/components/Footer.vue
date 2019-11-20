@@ -1,15 +1,12 @@
 <template>
-  <el-container>
-  <el-header>Header</el-header>
-  <el-main>Main</el-main>
-  <el-footer>Footer</el-footer>
-</el-container>
-
+    <div>
+        Footer
+    </div>
 </template>
 
 <script>
 export default {
-    name : "Index",
+    name : "Footer",
     data(){
         return {
             msg:"this is index"
