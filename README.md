@@ -2,6 +2,10 @@
 
 > A Vue.js project
 has use ElementUI
+has use axios
+
+The Axios code is in the Axios folder. 
+HTTP of each page corresponds to each JS file
 
 ## Build Setup
 
