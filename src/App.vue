@@ -1,24 +1,95 @@
 <template>
   <el-container>
-  <el-header><router-view name="header"></router-view></el-header>
-  <el-main><router-view name="index"></router-view></el-main>
-  <el-footer><router-view name="footer"></router-view></el-footer>
+    <el-header>
+      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
+        <el-row>
+          <el-col
+            :xs="{span:3}"
+            :sm="{span:2,offset:11}"
+            :md="{span:2,offset:10}"
+            :lg="{span:1,offset:15}"
+            :xl="{span:1,offset:14}"
+          >
+            <el-menu-item index="1">
+               <div style="text-align:center"><router-link to="/Index">
+               主页
+              </router-link></div>
+            </el-menu-item>
+          </el-col>
+          <el-col :xs="{span:5}" :sm="{span:3}" :md="{span:3}" :lg="{span:2}" :xl="{span:1}">
+            <el-submenu index="2">
+              <template slot="title">日志</template>
+              <el-menu-item index="2-1">选项1</el-menu-item>
+              <el-menu-item index="2-2">选项2</el-menu-item>
+              <el-menu-item index="2-3">选项3</el-menu-item>
+              <el-submenu index="2-4">
+                <template slot="title">选项4</template>
+                <el-menu-item index="2-4-1">选项1</el-menu-item>
+                <el-menu-item index="2-4-2">选项2</el-menu-item>
+                <el-menu-item index="2-4-3">选项3</el-menu-item>
+              </el-submenu>
+            </el-submenu>
+          </el-col>
+          <el-col :xs="{span:2}" :sm="{span:2}" :md="{span:2}" :lg="{span:1}" :xl="{span:1}">
+            <el-menu-item index="3">
+              <div style="text-align:center">关于我</div>
+            </el-menu-item>
+          </el-col>
+          <el-col
+            :xs="{span:4,offset:8}"
+            :sm="{span:4,offset:2}"
+            :md="{span:2,offset:5}"
+            :lg="{span:2,offset:3}"
+            :xl="{span:1,offset:5}"
+          >
+            <div class="block">
+              <el-image
+                style="width: 50px; height: 50px; border-radius:50%;overflow: hidden;"
+                :src="images"
+              ></el-image>
+            </div>
+          </el-col>
+        </el-row>
+      </el-menu>
+    </el-header>
+    <el-main>
+      <router-view></router-view>
+    </el-main>
+    <el-footer>
+      <div>Footer</div>
+    </el-footer>
   </el-container>
 </template>
 
 <script>
 export default {
-  name:'App'
-}
+  name: "App",
+  data() {
+    return {
+      images: require("./images/myheadportrait.png"),
+      activeIndex: "1"
+    };
+  }
+};
 </script>
 
 <style>
+.header {
+  color: #8590a6;
+  border-bottom-width: 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
