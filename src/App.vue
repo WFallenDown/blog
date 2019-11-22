@@ -1,7 +1,13 @@
 <template>
   <el-container>
     <el-header>
-      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
+      <el-menu
+        :default-active="activeIndex"
+        class="my-el-menu"
+        mode="horizontal"
+        background-color="#000000"
+        text-color="#fff"
+      >
         <el-row>
           <el-col
             :xs="{span:3}"
@@ -11,9 +17,9 @@
             :xl="{span:1,offset:14}"
           >
             <el-menu-item index="1">
-               <div style="text-align:center"><router-link to="/Index">
-               主页
-              </router-link></div>
+              <div style="text-align:center">
+                <router-link to="/Index">主页</router-link>
+              </div>
             </el-menu-item>
           </el-col>
           <el-col :xs="{span:5}" :sm="{span:3}" :md="{span:3}" :lg="{span:2}" :xl="{span:1}">
@@ -42,12 +48,10 @@
             :lg="{span:2,offset:3}"
             :xl="{span:1,offset:5}"
           >
-            <div class="block">
-              <el-image
-                style="width: 50px; height: 50px; border-radius:50%;overflow: hidden;"
-                :src="images"
-              ></el-image>
-            </div>
+            <el-image
+              style="width: 50px; height: 50px; border-radius:50%;overflow: hidden; top:4px;"
+              :src="images"
+            ></el-image>
           </el-col>
         </el-row>
       </el-menu>
@@ -79,8 +83,31 @@ export default {
   border-bottom-width: 1px;
 }
 
+.my-el-menu {
+  border-bottom-color: #444444 !important ;
+  border: 0 !important;
+}
+
 a {
   text-decoration: none;
+  color: #fff;
+}
+
+header {
+  padding: 0 !important;
+  height: auto !important;
+}
+
+main {
+  padding: 0 !important;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #666666;
 }
 
 #app {
@@ -91,5 +118,4 @@ a {
   color: #2c3e50;
   margin-top: 60px;
 }
-
 </style>

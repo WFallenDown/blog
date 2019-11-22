@@ -1,8 +1,6 @@
 <template>
-  <div class="demo-image__placeholder">
-  <div class="block">
-    <el-image :src="banner"></el-image>
-  </div>
+  <div class="banner">
+    
   </div>
 </template>
 
@@ -13,7 +11,7 @@ export default {
     return {
       msg: "this is index",
       home: this.$axios.Home,
-      banner:require('../images/013c77573c2a1a32f8757cb9d5ad4d.jpg@1280w_1l_2o_100sh.jpg')
+      banner: require("../images/013c77573c2a1a32f8757cb9d5ad4d.jpg@1280w_1l_2o_100sh.jpg")
     };
   },
   methods: {
@@ -25,4 +23,9 @@ export default {
 </script>
 
 <style>
+.banner{
+    height: 500px;
+    background-image: url('~@/images/013c77573c2a1a32f8757cb9d5ad4d.jpg@1280w_1l_2o_100sh.jpg');
+    background-size: 100%;
+}
 </style>
