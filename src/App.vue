@@ -5,8 +5,8 @@
         :default-active="activeIndex"
         class="my-el-menu"
         mode="horizontal"
-        background-color="#000000"
-        text-color="#fff"
+        background-color="#fff"
+        text-color="#000000"
       >
         <el-row>
           <el-col
@@ -90,7 +90,7 @@ export default {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #000000;
 }
 
 header {
@@ -107,7 +107,6 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: #666666;
 }
 
 #app {
