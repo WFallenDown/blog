@@ -12,9 +12,9 @@
         <el-col :span="18" :offset="4">Articles I like</el-col>
       </el-row>
       <el-row>
-        <el-col :span="18" :offset="4">
+        <el-col :span="16" :offset="4">
           <el-row>
-            <el-col :span="3" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 1 : 0">
+            <el-col :span="3" v-for="(o, index) in 6" :key="o" :offset="index > 0 ? 1 : 0">
               <el-card :body-style="{ padding: '0px' }">
                 <img
                   src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
@@ -35,12 +35,12 @@
     </div>
     <div class="list">
       <el-row>
-        <el-col :span="8" :offset="4">
+        <el-col :span="7" :offset="4">
           <el-card class="box-card">
             <div v-for="o in 4" :key="o" class="text item">{{'列表内容 ' + o }}</div>
           </el-card>
         </el-col>
-        <el-col :span="8" :offset="2">
+        <el-col :span="7" :offset="2">
           <el-card class="box-card">
             <div v-for="o in 4" :key="o" class="text item">{{'列表内容 ' + o }}</div>
           </el-card>
