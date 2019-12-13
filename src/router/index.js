@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Index from '@/components/Index'
 import Journal from '@/components/Journal'
 import About from '@/components/About'
+import Article from '@/components/content/Article'
 
 Vue.use(Router)
 
@@ -27,6 +28,11 @@ export default new Router({
       path:'/About',
       name:'About',
       component:About
+    },
+    {
+      path:'/Journal/Article/:id',
+      name:'Article',
+      component:Article
     }
   ]
 })
