@@ -4,7 +4,7 @@ import Index from '@/components/Index'
 import Journal from '@/components/Journal'
 import About from '@/components/About'
 import Article from '@/components/content/Article'
-import CIndex from '@/controller/Index'
+import CIndex from '@/components/controller/Index'
 
 Vue.use(Router)
 
