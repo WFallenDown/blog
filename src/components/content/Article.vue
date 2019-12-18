@@ -1,7 +1,14 @@
 <template>
   <div>
-    <h3>Article</h3>
-    <h3>{{ this.$route.params }}</h3>
+    <div>
+      <h3>{{ title }}</h3>
+    </div>
+    <div>
+        {{ date }}
+    </div>
+    <div>
+        {{ body }}
+    </div>
   </div>
 </template>
 
@@ -9,7 +16,13 @@
 export default {
   name: "Article",
   data() {
-    return {};
+    return {
+      title: "I am Title",
+      date: new Date(),
+      tog: [],
+      body:"I am a body",
+      author: "author"
+    };
   },
   mounted: function() {
     console.log(this.$route.params);
