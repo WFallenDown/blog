@@ -23,35 +23,25 @@
             </el-menu-item>
           </el-col>
           <el-col :xs="{span:5}" :sm="{span:3}" :md="{span:3}" :lg="{span:2}" :xl="{span:1}">
-            <el-submenu index="2">
-              <template slot="title"><router-link to="Journal">日志</router-link></template>
-              <el-menu-item index="2-1">选项1</el-menu-item>
-              <el-menu-item index="2-2">选项2</el-menu-item>
-              <el-menu-item index="2-3">选项3</el-menu-item>
-              <el-submenu index="2-4">
-                <template slot="title">选项4</template>
-                <el-menu-item index="2-4-1">选项1</el-menu-item>
-                <el-menu-item index="2-4-2">选项2</el-menu-item>
-                <el-menu-item index="2-4-3">选项3</el-menu-item>
-              </el-submenu>
-            </el-submenu>
+            <el-menu-item index="2">
+              <div style="text-align:center">
+                <router-link to="/Journal">日志</router-link>
+              </div>
+            </el-menu-item>
           </el-col>
           <el-col :xs="{span:2}" :sm="{span:2}" :md="{span:2}" :lg="{span:1}" :xl="{span:1}">
             <el-menu-item index="3">
               <div style="text-align:center">关于我</div>
             </el-menu-item>
           </el-col>
-          <el-col
+          <el-col v-if="showImg"
             :xs="{span:4,offset:8}"
             :sm="{span:4,offset:2}"
             :md="{span:2,offset:5}"
             :lg="{span:2,offset:3}"
             :xl="{span:1,offset:5}"
           >
-            <el-image
-              style="width: 50px; height: 50px; border-radius:50%;overflow: hidden; top:4px;"
-              :src="images"
-            ></el-image>
+          <el-avatar :size="50" style="margin-top:2px" :src="images"></el-avatar>
           </el-col>
         </el-row>
       </el-menu>
@@ -71,7 +61,8 @@ export default {
   data() {
     return {
       images: require("./images/myheadportrait.png"),
-      activeIndex: "1"
+      activeIndex: "1",
+      showImg: false
     };
   }
 };

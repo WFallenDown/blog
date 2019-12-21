@@ -1,4 +1,4 @@
-/* <template>
+<template>
   <div>
     <div class="banner">
       <img src="../images/e5bd25f8f6aab99e15bafe76cfee4998.jpg" class="bannerImg" />
